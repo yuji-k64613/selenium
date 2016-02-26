@@ -26,7 +26,7 @@ public class Selenium2ExampleTest {
         WebDriver driver = null;
         try {
             driver = new RemoteWebDriver(
-                    new URL("http://172.17.42.1:4444/wd/hub"),
+                    new URL("http://172.18.0.1:4444/wd/hub"),
                     DesiredCapabilities.firefox());
         } catch (MalformedURLException e) {
             e.printStackTrace();
