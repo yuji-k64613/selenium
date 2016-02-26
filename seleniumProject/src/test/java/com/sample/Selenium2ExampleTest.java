@@ -22,15 +22,15 @@ public class Selenium2ExampleTest {
         // Create a new instance of the Firefox driver
         // Notice that the remainder of the code relies on the interface,
         // not the implementation.
-        WebDriver driver = new FirefoxDriver();
-//        WebDriver driver = null;
-//        try {
-//            driver = new RemoteWebDriver(
-//                    new URL("http://localhost:4444/wd/hub"),
-//                    DesiredCapabilities.firefox());
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
+        //WebDriver driver = new FirefoxDriver();
+        WebDriver driver = null;
+        try {
+            driver = new RemoteWebDriver(
+                    new URL("http://172.17.42.1:4444/wd/hub"),
+                    DesiredCapabilities.firefox());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
         // And now use this to visit Google
         driver.get("http://www.google.com");
